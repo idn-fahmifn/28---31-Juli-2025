@@ -3,6 +3,10 @@
     color: #0088cc;
 }
 
+.title:hover{
+    color: #ff0000;
+}
+
 .text-bold{
     font-weight: 700;
 }
