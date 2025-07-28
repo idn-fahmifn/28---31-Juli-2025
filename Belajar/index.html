@@ -94,12 +94,12 @@
         quibusdam, possimus maiores aliquam voluptatem. Omnis beatae quam est.
       </p>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint fuga aut
+        Lorem ipsum dolor, <mark>Lorem, ipsum.</mark> sit amet consectetur adipisicing elit. Sint fuga aut
         quibusdam, possimus maiores aliquam voluptatem. Omnis beatae quam est.
       </p>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint fuga aut
-        quibusdam, possimus maiores aliquam voluptatem. Omnis beatae quam est.
+        quibusdam, possimus maiores <del>aliquam voluptatem</del>. Omnis beatae quam est. <ins>test</ins>
       </p>
       <img src="image/gambar2.png" width="300" alt="Gambar kedua" />
     </div>
@@ -107,6 +107,9 @@
     <p>
         Lorem ipsum dolor sit amet. <span style="background-color: #0088cc;">Lorem, ipsum.</span> Lorem ipsum dolor sit amet.
     </p>
+
+    <p>H<sub>2</sub>O</p>
+    <p>20 M<sup>2</sup></p>
 
     <!-- . untuk class -->
     <!-- # untuk id -->
@@ -172,11 +175,41 @@
 
             <!-- tabel body -->
              <tbody>
-                
+
                 <!-- tabel row atau baris -->
                 <tr>
                     <td>John Doe</td>
                     <td>Jakarta</td>
+                    <td>+1 234 567</td>
+                </tr>
+
+                <tr>
+                    <td>John Doe</td>
+                    <td>Jakarta</td>
+                    <td>+1 234 567</td>
+                </tr>
+
+                <!-- colspan = menggabungkan column pada tabel -->
+                <tr>
+                    <td colspan="3" style="background-color: #ff000060; text-align: center;">Data user hilang</td>
+                </tr>
+
+                <tr>
+                    <td>John Doe</td>
+                    <td>Jakarta</td>
+                    <td>+1 234 567</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td rowspan="3" style="background-color: #0088cc60; text-align: center;">Semarang</td>
+                    <td>+1 234 567</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>+1 234 567</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
                     <td>+1 234 567</td>
                 </tr>
                 <tr>
@@ -185,9 +218,18 @@
                     <td>+1 234 567</td>
                 </tr>
              </tbody>
-             
-
         </table>
+
+        <audio controls>
+            <source src="sumbernya" type="mp3/mpeg">
+            Play Audio
+        </audio>
+
+        <video controls>
+            <source src="sumbernya" type="mp3/mpeg">
+            Play video
+        </video>
+
     </div>
 
   </body>
