@@ -14,20 +14,45 @@
       }
 
       /* memanggil selector tag */
-      p {
-        font-size: 2em;
-      }
-
-      h1 {
-        font-size: 5em;
-      }
+    
       
-
       /* memanggil selector ID */
       #judul{
         color: #0088cc;
       }
+      .kotak{
+        width: 400px;
+        height: 300px;
+        background: #62ff00;
+        padding: 10px;
+      }
 
+      /* selector kombinasi (mengelompokan) */
+      .bola-1, .bola-2, .bola-3{
+        width: 70px;
+        height: 70px;
+        background: #0088cc;
+        border-radius: 100%;
+      }
+
+      /* selector keturunan (Descendant Selector) */
+      .header .judul{
+        font-size: 2em;
+      }
+
+      /* pseudoclass hover */
+      .judul:hover{
+        color: #62ff00;
+      }
+
+      .bola{
+        width: 70px;
+        height: 70px;
+        background: #cc0000;
+        border-radius: 100%;
+        margin: 5px;
+      }
+      
     </style>
 
     <!-- eksternal css -->
@@ -48,7 +73,27 @@
 
     <h3 id="judul">Lorem, ipsum.</h3>
 
-    <div class="nama-kelas" id="inId"></div>
+
+    <div class="kotak">
+        <div class="bola-1"></div>
+        <div class="bola-2"></div>
+        <div class="bola-3"></div>
+    </div>
+
+    <div class="header">
+        <p class="judul">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="content">
+        <p class="judul">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, unde?</p>
+    </div>
+
+    <div class="kotak">
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+        <div class="bola"></div>
+    </div>
 
 
 
