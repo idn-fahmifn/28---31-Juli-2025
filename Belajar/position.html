@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDN Contoh Position</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding-bottom: 50px; /* Memberi ruang di bagian bawah */
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      hr {
+        margin: 40px 0;
+        border: 1px dashed #ccc;
+      }
+
+      /* Style dasar untuk semua box */
+      .box {
+        width: 300px;
+        padding: 20px;
+        border: 2px solid #333;
+        color: #333;
+      }
+
+      /* 1. Static */
+      .static-box {
+        position: static; /* Ini adalah nilai default */
+        background-color: #f0f0f0;
+      }
+
+      /* 2. Relative */
+      .relative-box {
+        position: relative;
+        top: 20px;
+        left: 30px;
+        background-color: lightblue;
+      }
+
+      /* 3. Absolute */
+      .absolute-container {
+        position: relative; 
+        height: 200px;
+        background-color: #e0e0e0;
+      }
+
+      .absolute-box {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        width: 200px; /* Lebar bisa diatur berbeda */
+        background-color: lightcoral;
+      }
+
+      /* 4. Fixed */
+      .fixed-box {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: auto; /* Lebar sesuai konten */
+        background-color: lightgreen;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      /* 5. Sticky */
+      .sticky-box {
+        position: sticky;
+        top: 0; /* Akan menempel 0px dari atas saat di-scroll */
+        background-color: gold;
+        width: 100%; /* Lebar penuh agar terlihat jelas saat menempel */
+        box-sizing: border-box; /* Agar padding tidak menambah lebar */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contoh Properti Position CSS</h1>
+
+    <h2>Position: static (Default)</h2>
+    <div class="box static-box">
+      Box ini statis. Ia mengikuti alur normal halaman.
+    </div>
+
+    <hr />
+
+    <h2>Position: relative 📌</h2>
+    <div class="box relative-box">
+      Box ini relative. Ia digeser 20px dari atas dan 30px dari kiri posisi
+      normalnya. Ruang aslinya tetap kosong.
+    </div>
+    <div class="box">
+      Box lain untuk menunjukkan ruang kosong yang ditinggalkan.
+    </div>
+
+    <hr />
+
+    <h2>Position: absolute 🚀</h2>
+    <div class="box absolute-container">
+      Ini adalah kontainer relative.
+      <div class="box absolute-box">
+        Box ini absolute. Posisinya relatif terhadap kontainer di atas, bukan
+        halaman.
+      </div>
+    </div>
+
+    <hr />
+
+    <h2>Position: sticky 🍯</h2>
+    <p>Scroll ke bawah untuk melihat efek sticky...</p>
+    <div class="box sticky-box">
+      Box ini sticky. Ia akan menempel di atas saat Anda scroll melewatinya.
+    </div>
+
+    <div style="height: 1200px; background-color: #eee; padding: 10px">
+      Area scroll...
+    </div>
+
+    <div class="box fixed-box">
+      <img
+        src="https://www.idn.id/wp-content/uploads/2023/01/LOGO-ID-Networkers-IDN.ID-Merah-1024x320.png"
+        width="250px"
+        alt=""
+      />
+    </div>
+  </body>
+</html>
