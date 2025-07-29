@@ -52,7 +52,35 @@
         border-radius: 100%;
         margin: 5px;
       }
+
+      /* first child -> mengubah elemen pertama */
+      /* last child -> mengubah elemen pertama */
+      /* .kotak .bola:first-child{
+        background-color: yellow;
+      } */
+
+      /* untuk mengubah child sesuai dengan urutan */
+      /* bisa juga menggunakan odd/even */
+      .kotak .bola:nth-child(odd){
+        background-color: aqua;
+      }
+
+      .kardus{
+        width: 200px;
+        height: 100px;
+        border: 1px #000 solid;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .televisi{
+        width: 120px;
+        height: 90px;
+        background-color: bisque;
+      }
+
       
+
     </style>
 
     <!-- eksternal css -->
@@ -89,10 +117,21 @@
     </div>
 
     <div class="kotak">
-        <div class="bola"></div>
-        <div class="bola"></div>
-        <div class="bola"></div>
-        <div class="bola"></div>
+        <div class="bola">1</div>
+        <div class="bola">2</div>
+        <div class="bola">3</div>
+    </div>
+
+
+    <div class="kardus">
+        <div class="televisi">
+            TV
+        </div>
+    </div>
+    <div class="kardus">
+        <div class="televisi">
+            TV
+        </div>
     </div>
 
 
