@@ -88,16 +88,27 @@
 
       .container{
         width: 100dvw;
+        height: 100px;
+        margin: 10px;
         padding: 10px;
         background-color: #cccccc;
       }
 
       /* display menguasai 1 baris halaman */
       .d-block span{
+        width: 300px;
         padding: 20px;
         background-color: #62ff0060;
         margin: 10px;
         display: block;
+      }
+
+      /* display inline membuat elemen baru di garis yang sama */
+      .d-inline span{
+        padding: 20px;
+        background-color: #62ff0060;
+        margin: 10px;
+        display: inline;
       }
 
     </style>
@@ -152,6 +163,15 @@
       <div class="televisi">TV</div>
     </div>
 
+     <div class="container">
+        <div class="d-inline">
+            <span>Ini adalah display Inline</span>
+            <span>Ini adalah display Inline</span>
+            <span>Ini adalah display Inline</span>
+            <span>Ini adalah display Inline Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, pariatur.</span>
+        </div>
+    </div>
+
 
     <div class="container">
         <div class="d-block">
@@ -160,6 +180,8 @@
             <span>Ini adalah display block</span>
         </div>
     </div>
+
+   
 
   </body>
 </html>
