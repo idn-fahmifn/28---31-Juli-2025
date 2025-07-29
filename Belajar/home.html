@@ -81,7 +81,8 @@
       .televisi {
         width: 120px;
         height: 90px;
-        background-color: bisque;
+        float: right;
+        background-color: #ffe4c4;
       }
 
       .container {
@@ -133,7 +134,7 @@
         visibility: hidden;
       }
 
-      .box{
+      .box {
         width: 100px;
         height: 60px;
         background: #0088cc;
@@ -141,27 +142,72 @@
       }
 
       /* relatif box dapat digeser ke manapun sesuai parent. */
-      .relative{
+      .relative {
         position: relative;
         top: 30px;
         left: 20px;
         background: #cc0000;
       }
 
-      /* dia akan mengikuti posisi dari relative,
-      jika tidak ada parent yang posisi relatice, dia akan
-      mencari ukuran body. */
-      .absolute-container{
+      .biru:hover{
         position: relative;
       }
 
-      .absolute{
+      .flexbox{
+        width: 100dvw;
+        min-height: 20dvw;
+        background-color: #eeeeee;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; 
+        flex-wrap: wrap; /*mengizinkan membuat garis baru*/
+      }
+      .card{
+        flex: 1 1 200px;
+        /* shorthand
+        -flex grow ; mengizinkan mengembang di ruang kosong
+        -flex-shrink ; menyusut ketika ruang menyempit
+        -flex basis : 200 px (ukuran ideal 200px)
+
+        kunci agar tetap responsive menggunakan display flex.
+         */
+        width: 200px;
+        height: 80px;
+        margin: 10px;
+        background-color: #0088cc50;
+      }
+
+
+
+      /* dia akan mengikuti posisi dari relative,
+      jika tidak ada parent yang posisi relatice, dia akan
+      mencari ukuran body. */
+      .absolute-container {
+        position: relative;
+      }
+
+      .absolute {
         position: absolute;
         top: 40px;
-        left: 70%;
+        left: 20%;
         background: #cc5800;
       }
 
+      .area-fixed {
+        position: fixed;
+        bottom: 30px;
+        right: 5%;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .sticky {
+        width: 100dvw;
+        position: sticky;
+        top: 0;
+        background-color: #cc5800;
+      }
     </style>
 
     <!-- eksternal css -->
@@ -202,13 +248,17 @@
     <div class="container">
       <p>ini adalah relative</p>
       <div class="box relative">Box Relative</div>
-      <div class="box">Box Tambahan</div>
+      <div class="box biru">Box Tambahan</div>
     </div>
 
     <div class="container absolute-container">
       <p>ini adalah relative</p>
       <div class="box absolute">Box Absolute</div>
     </div>
+
+    <div class="area-fixed">diam.</div>
+
+    <div class="box sticky">Ini Sticky</div>
 
     <div class="kotak">
       <div class="bola">1</div>
@@ -259,5 +309,14 @@
         <span>Ini adalah display inline-block</span>
       </div>
     </div>
+
+    <div class="flexbox">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
   </body>
 </html>
