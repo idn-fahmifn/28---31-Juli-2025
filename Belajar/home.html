@@ -200,6 +200,7 @@
         width: 100px;
         height: 100px;
         background-color: pink;
+        z-index: 10;
       }
 
       .sticky {
@@ -208,6 +209,22 @@
         top: 0;
         background-color: #cc5800;
       }
+
+      .grid-container{
+        width: 100dvw;
+        min-height: 20dvh;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 20px;
+      }
+
+      .grid-item{
+        background-color: #62ff00;
+        height: 150px;
+        padding: 20px;
+      }
+
     </style>
 
     <!-- eksternal css -->
@@ -317,6 +334,20 @@
         <div class="card"></div>
         <div class="card"></div>
     </div>
+
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+
+    
 
   </body>
 </html>
