@@ -149,20 +149,20 @@
         background: #cc0000;
       }
 
-      .biru:hover{
+      .biru:hover {
         position: relative;
       }
 
-      .flexbox{
+      .flexbox {
         width: 100dvw;
         min-height: 20dvw;
         background-color: #eeeeee;
         display: flex;
         justify-content: space-evenly;
-        align-items: center; 
+        align-items: center;
         flex-wrap: wrap; /*mengizinkan membuat garis baru*/
       }
-      .card{
+      .card {
         flex: 1 1 200px;
         /* shorthand
         -flex grow ; mengizinkan mengembang di ruang kosong
@@ -176,8 +176,6 @@
         margin: 10px;
         background-color: #0088cc50;
       }
-
-
 
       /* dia akan mengikuti posisi dari relative,
       jika tidak ada parent yang posisi relatice, dia akan
@@ -210,19 +208,38 @@
         background-color: #cc5800;
       }
 
-      .grid-container{
+      .grid-container {
         width: 100dvw;
         min-height: 20dvh;
         display: grid;
         grid-gap: 20px;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         padding: 20px;
       }
 
-      .grid-item{
+      .grid-item {
         background-color: #62ff00;
         height: 150px;
         padding: 20px;
+      }
+
+      /* media menyeseuaikan layar dengan ukuran device */
+      /* ukuran tablet */
+      @media screen and (max-width: 768px) {
+        .card {
+          background: #62ff00;
+        }
+
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* ukuran handphone (L) */
+      @media screen and (max-width: 425px) {
+        .grid-container {
+          grid-template-columns: repeat(1, 1fr);
+        }
       }
 
     </style>
@@ -328,26 +345,20 @@
     </div>
 
     <div class="flexbox">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
     </div>
 
     <div class="grid-container">
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
     </div>
-
-    
-
   </body>
 </html>
