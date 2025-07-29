@@ -7,12 +7,10 @@
 
     <!-- internal css -->
     <style>
-
-      *{
+      * {
         margin: 0;
         padding: 0;
-      }  
-
+      }
 
       /* memanggil class */
       .text-paragraf {
@@ -86,7 +84,7 @@
         background-color: bisque;
       }
 
-      .container{
+      .container {
         width: 100dvw;
         margin: 10px;
         padding: 10px;
@@ -94,7 +92,7 @@
       }
 
       /* display menguasai 1 baris halaman */
-      .d-block span{
+      .d-block span {
         width: 300px;
         padding: 20px;
         background-color: #62ff0060;
@@ -105,7 +103,7 @@
 
       /* display inline membuat
     elemen baru di garis yang sama */
-      .d-inline span{
+      .d-inline span {
         padding: 20px;
         background-color: #62ff0060;
         margin: 10px;
@@ -117,7 +115,7 @@
       block dan inline, bisa atur ukuran, pading margin 
       dan berada di baris yang sama.
       */
-      .d-inline-block span{
+      .d-inline-block span {
         width: 300px;
         padding: 20px;
         background-color: #00eaff60;
@@ -125,14 +123,20 @@
         display: inline-block;
       }
 
+      .d-inline-block .none{
+        display: none;
+      }
 
+      .d-inline-block .hidden{
+        visibility: hidden;
+      }
+ 
     </style>
 
     <!-- eksternal css -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animasi.css" />
   </head>
-
 
   <body>
     <!-- inline css -->
@@ -178,31 +182,40 @@
       <div class="televisi">TV</div>
     </div>
 
-     <div class="container">
-        <div class="d-inline">
-            <span>Ini adalah display Inline</span>
-            <span>Ini adalah display Inline</span>
-            <span>Ini adalah display Inline</span>
-            <span>Ini adalah display Inline Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, pariatur.</span>
-        </div>
+    <div class="container">
+      <div class="d-inline">
+        <span>Ini adalah display Inline</span>
+        <span>Ini adalah display Inline</span>
+        <span>Ini adalah display Inline</span>
+        <span
+          >Ini adalah display Inline Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Libero, pariatur.</span
+        >
+      </div>
     </div>
 
     <div class="container">
-        <div class="d-block">
-            <span>Ini adalah display block</span>
-            <span>Ini adalah display block</span>
-        </div>
+      <div class="d-block">
+        <span>Ini adalah display block</span>
+        <span>Ini adalah display block</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="d-inline-block">
+        <span>Ini adalah display inline-block</span>
+        <span>Ini adalah display inline-block</span>
+        <span>Ini adalah display inline-block</span>
+      </div>
     </div>
 
      <div class="container">
-        <div class="d-inline-block">
-            <span>Ini adalah display inline-block</span>
-            <span>Ini adalah display inline-block</span>
-            <span>Ini adalah display inline-block</span>
-        </div>
+      <div class="d-inline-block">
+        <span>Ini adalah display inline-block</span>
+        <span class="none">Ini None </span>
+        <span class="hidden">Ini adalah display hidden</span>
+        <span>Ini adalah display inline-block</span>
+      </div>
     </div>
-
-   
-
   </body>
 </html>
