@@ -60,10 +60,16 @@ console.log(!senang) //true
 
 // operator ternerary.
 // penulisan kondisi if-else yang sangat sederhan ketika ada sebuah kondisi.
-
 let umur = 10;
 let ktp = (umur >= 17) ? "Dapet KTP" : "Belum dapet KTP";
 console.log(ktp)
+
+
+
+
+let lima = prompt('masukan angka');
+console.log(lima);
+// console.log("ini sudah diubah jadi string", String(lima) );
 
 
 
