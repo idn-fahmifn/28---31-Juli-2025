@@ -11,6 +11,54 @@ console.log(`hasil dari ${bil1} / ${bil2} adalah ${bil1 / bil2}`)
 console.log(`hasil dari modulus 16%3 adalah ${16%3}`)
 console.log(`pangkat dari 5 pangkat 5 ${5 ** 5}`)
 
+// operator penugasan dasar.
+let skor = 10;
+console.log("Penugasan dasar", skor)
+
+skor += 20
+console.log("tambahkan dan tugaskan, nilai awal 10 ditambah 20 menjadi", skor)
+
+skor -= 5
+console.log(`tambahkan dan tugaskan, nilai awal 30 Kurangi 5 menjadi ${skor}`)
+
+// operator perbandingan
+console.log(5 == 5) //true
+console.log(5 == '5') //true
+console.log(5 === '5' ) //false
+console.log(5 === 5 ) //true
+
+console.log(5 != 5) // sama saja => false
+console.log(5 != '5')  //sama saja => false
+console.log( 5 !== '5' ) // salah => true
+console.log( 5 !== 5 ) //false
+
+console.log (10 < 7) //false
+console.log (10 >= 7) //true
+console.log (10 <= 7 ) //false
+
+// and && = keduanya harus sama
+// or || = salah satunya harus benar
+// not ! = kebalikannya.
+
+// T && T => true
+// T && F => false
+// F && F => false
+
+// T || T => true
+// T || F => true
+// F || F => false
+
+// !F = true
+// !T = false
+
+let gajian = true;
+let senang = false;
+
+console.log(gajian && senang) //false
+console.log(gajian || senang) //true
+console.log(!senang) //true
+
+
 
 
 // tipe data
