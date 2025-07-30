@@ -1,5 +1,6 @@
 
 // tipe data
+// tipe data primitif
 // tipe data string digunakan untuk text
 let mobil = "toyota" //string.
 let mobilSaya = `Saya punya mobil. Mereknya adalah ${mobil}`; //string dengan template literal
@@ -14,6 +15,19 @@ console.log('Hallo, nama saya' + name + 'umur saya adalah' + age);
 // 2 => bisa lebih dari 1  variable yang dipanggil (recomended).
 console.log(`Halo nama saya ${name}, umur saya adalah ${age}, saya berasal dari ${asal}`)
 
+
+// Tipe data non primitive
+
+let kelas = {
+    'nama_kelas' : 'Web programming Basic',
+    'jenis_kelas' : 'Programming',
+    'total_peserta' : 20,
+    'is_running' : true,
+    'data_trainer' : {
+        'nama_trainer' : 'asep', 
+        'no_hanphone' : '+1 2345 678', 
+    }
+}
 
 // number (integer, float, NaN, Infinity)
 let usia = 25; //integer
