@@ -15,7 +15,6 @@ console.log('Hallo, nama saya' + name + 'umur saya adalah' + age);
 // 2 => bisa lebih dari 1  variable yang dipanggil (recomended).
 console.log(`Halo nama saya ${name}, umur saya adalah ${age}, saya berasal dari ${asal}`)
 
-
 // Tipe data non primitive
 
 let kelas = {
@@ -28,6 +27,13 @@ let kelas = {
         'no_hanphone' : '+1 2345 678', 
     }
 }
+console.log(kelas.nama_kelas)
+console.log(kelas['total_peserta']);
+
+console.log(`Saya sedang mengikuti ${kelas.nama_kelas}, dengan jumlah pesertanya ${kelas['total_peserta']} dan Trainernya adalah Mr. ${kelas.data_trainer['nama_trainer']}`)
+
+// saya sedang mengikut kelas web programming basic,
+// dengan jumlah pesertanya 20 dan trainernya adalah Mr.Asep.
 
 // number (integer, float, NaN, Infinity)
 let usia = 25; //integer
