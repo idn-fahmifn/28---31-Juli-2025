@@ -83,6 +83,8 @@
         height: 90px;
         float: right;
         background-color: #ffe4c4;
+        /* panggil nama animasi, waktu, looping */
+        animation: animasi 2s infinite alternate;
       }
 
       .container {
@@ -162,20 +164,7 @@
         align-items: center;
         flex-wrap: wrap; /*mengizinkan membuat garis baru*/
       }
-      .card {
-        flex: 1 1 200px;
-        /* shorthand
-        -flex grow ; mengizinkan mengembang di ruang kosong
-        -flex-shrink ; menyusut ketika ruang menyempit
-        -flex basis : 200 px (ukuran ideal 200px)
-
-        kunci agar tetap responsive menggunakan display flex.
-         */
-        width: 200px;
-        height: 80px;
-        margin: 10px;
-        background-color: #0088cc50;
-      }
+      
 
       /* dia akan mengikuti posisi dari relative,
       jika tidak ada parent yang posisi relatice, dia akan
@@ -221,6 +210,45 @@
         background-color: #62ff00;
         height: 150px;
         padding: 20px;
+      }
+      .card {
+        flex: 1 1 200px;
+        /* shorthand
+        -flex grow ; mengizinkan mengembang di ruang kosong
+        -flex-shrink ; menyusut ketika ruang menyempit
+        -flex basis : 200 px (ukuran ideal 200px)
+
+        kunci agar tetap responsive menggunakan display flex.
+         */
+        width: 200px;
+        height: 80px;
+        margin: 10px;
+        background-color: #0088cc50;
+        animation: loncat .5s infinite alternate;
+      }
+
+      @keyframes loncat {
+        from{
+            transform: translateY(0);
+        }to{
+            transform: translateY(-100px);
+            background-color: #62ff00;
+        }
+      }
+
+      @keyframes animasi {
+        0%{
+            /* animasi */
+            background-color: #0088cc;
+        }
+        50%{
+            /* animasi */
+            background-color: #ff0000;
+        }
+        100%{
+            /* animasi */
+            background-color: #cc5800;
+        }
       }
 
       /* media menyeseuaikan layar dengan ukuran device */
