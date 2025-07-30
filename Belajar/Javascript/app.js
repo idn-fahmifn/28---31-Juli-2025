@@ -1,4 +1,18 @@
 
+
+// operator
+// aritmatik
+let bil1 = 10;
+let bil2 = 30;
+console.log(`hasil dari ${bil1} + ${bil2} adalah ${bil1 + bil2}`)
+console.log(`hasil dari ${bil1} - ${bil2} adalah ${bil1 - bil2}`)
+console.log(`hasil dari ${bil1} * ${bil2} adalah ${bil1 * bil2}`)
+console.log(`hasil dari ${bil1} / ${bil2} adalah ${bil1 / bil2}`)
+console.log(`hasil dari modulus 16%3 adalah ${16%3}`)
+console.log(`pangkat dari 5 pangkat 5 ${5 ** 5}`)
+
+
+
 // tipe data
 // tipe data primitif
 // tipe data string digunakan untuk text
@@ -27,13 +41,25 @@ let kelas = {
         'no_hanphone' : '+1 2345 678', 
     }
 }
-console.log(kelas.nama_kelas)
+console.log(kelas.nama_kelas);
 console.log(kelas['total_peserta']);
 
 console.log(`Saya sedang mengikuti ${kelas.nama_kelas}, dengan jumlah pesertanya ${kelas['total_peserta']} dan Trainernya adalah Mr. ${kelas.data_trainer['nama_trainer']}`)
 
-// saya sedang mengikut kelas web programming basic,
-// dengan jumlah pesertanya 20 dan trainernya adalah Mr.Asep.
+// Array
+let buah = ['apel', 'mangga', 'Anggur', 'Pear', 'Jeruk'];
+console.log(buah[3]);
+
+buah.push('Salak')
+console.log('Buah buahan saya : ' + buah)
+
+// menghitung jumlah array => length
+
+// Metode perubahan data yang umum digunakan
+// 1. push(item) => menambahkan item di akhir,
+// 2. pop() => menghapus item di akhir,
+// 3. shift() => menghapus item di awal,
+// 3. unshift(item) => Menambah item di awal,
 
 // number (integer, float, NaN, Infinity)
 let usia = 25; //integer
