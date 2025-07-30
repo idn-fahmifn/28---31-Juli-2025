@@ -5,10 +5,20 @@ let mobil = "toyota" //string.
 let mobilSaya = `Saya punya mobil. Mereknya adalah ${mobil}`; //string dengan template literal
 console.log(mobilSaya) //output
 
+let name = "fahmi"
+let age = 20
+const asal = 'Jakarta Barat' 
+
+// 1
+console.log('Hallo, nama saya' + name + 'umur saya adalah' + age);
+// 2 => bisa lebih dari 1  variable yang dipanggil (recomended).
+console.log(`Halo nama saya ${name}, umur saya adalah ${age}, saya berasal dari ${asal}`)
+
+
 // number (integer, float, NaN, Infinity)
 let usia = 25; //integer
 const pi = 3.14; // float decimal
-let salah = 'bakso' / 2; //NaN
+let salah = '10' / 2; //NaN
 let hasil = 100 - 200; // -Infinity
 console.log(hasil);
 
