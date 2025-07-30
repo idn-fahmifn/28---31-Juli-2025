@@ -58,6 +58,13 @@ console.log(gajian && senang) //false
 console.log(gajian || senang) //true
 console.log(!senang) //true
 
+// operator ternerary.
+// penulisan kondisi if-else yang sangat sederhan ketika ada sebuah kondisi.
+
+let umur = 10;
+let ktp = (umur >= 17) ? "Dapet KTP" : "Belum dapet KTP";
+console.log(ktp)
+
 
 
 
