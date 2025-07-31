@@ -45,14 +45,17 @@ let luasPersegiPanjang = persegiPanjang(10, 15)
 console.log("Luas Persegi Panjang adalah : ", luasPersegiPanjang)
 
 
+// Hitung luas lingkaran
+// 1. function => luasLingkaran
+// 2. Return rumus luas lingkaran
+// 3. Panggil di variabel.
 
+function luasLingkaran(r){
+  return 3.14 * r * r
+}
 
-
-
-
-
-
-
+let jariJari = luasLingkaran(10)
+console.log("Luas lingkaran adalah", jariJari);
 
 
 // kondisi
