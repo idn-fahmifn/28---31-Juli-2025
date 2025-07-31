@@ -49,6 +49,7 @@
         border: #222 solid 1px;
         margin: 10px;
         padding: 20px 10px;
+        border-radius: 8px;
       }
     </style>
   </head>
@@ -99,10 +100,17 @@
           //loop iteration data
           dataUser.forEach((item) => {
             const card = document.createElement("div");
-            card.setAttribute("class", "card")
+            card.setAttribute("class", "card");
+
+            const nama = document.createElement("h3");
+            nama.setAttribute("class", "nama");
+            nama.textContent = item.name
+
+            
 
 
             containerCard.appendChild(card)
+            card.appendChild(nama)
 
           })
 
