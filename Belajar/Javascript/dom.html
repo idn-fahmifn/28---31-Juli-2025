@@ -32,6 +32,7 @@
             <h1 id="heroTitle">Judul hero</h1>
             <p id="sub-title">Ini adalah sub-title</p>
             <p class="paragraf">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloremque!</p>
+            <img src="" alt="" id="gambar">
         </div>
     </div>
 
@@ -44,7 +45,24 @@
         // mengambil element html menggunakan class
         const paragraf = document.querySelector('.paragraf')
 
-        console.log(paragraf)
+        const image = document.getElementById('gambar');
+
+
+        // mengubah element
+        // text content => mengubah isi diantara tag pembuka dan tag penutup.
+        judul.textContent = "Ini adalah web DOM";
+
+        // mengubah style
+        paragraf.style.background = '#0088cc';
+        paragraf.style.padding = '10px';
+
+        //menambahkan/mengubah atribut
+        image.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png')
+        image.setAttribute('alt', 'contoh gambar')
+        
+        console.log(image)
+
+
 
     </script>
 
