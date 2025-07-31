@@ -27,13 +27,13 @@
         color: #ffff;
       }
 
-      .container{
+      .container {
         width: 100%;
         display: flex;
         justify-content: center;
         margin: 20px 10px;
       }
-      .container-card{
+      .container-card {
         width: 100%;
         min-height: 20dvw;
         display: flex;
@@ -42,26 +42,58 @@
         padding: 20px 10px;
         background: #eeee;
       }
-
     </style>
   </head>
   <body>
     <nav class="navbar">
       <h3 class="logo">My Card</h3>
       <i data-feather="shield"></i>
-
     </nav>
 
     <div class="container">
-        <h3>Daftar Nama Teman : </h3>
+      <h3>Daftar Nama Teman :</h3>
     </div>
+
+    <p id="loading">Wait..</p>
 
     <div class="container-card" id="containerCard"></div>
 
-
-
     <script>
       feather.replace();
+    </script>
+
+    <script>
+      // mengambil elemen
+      const containerCard = document.getElementById("containerCard");
+      const loadingText = document.getElementById("loading");
+
+      async function tampilkanData() {
+        try {
+          loadingText.textContent = "Sedang membaca data.";
+          loadingText.style.display = "block";
+
+          // url API
+          const api = "https://688ac9562a52cabb9f4efb0c.mockapi.io/users";
+          const response = await fetch(api);
+
+          // kondisi ketika gagal memuat data
+          if (!response.ok) {
+            console.log("error");
+            throw new Error(`HTTP bermasalah : ${response.status}`);
+          }
+          
+          // mengambil data dari response
+          const dataUser = await response.json();
+
+          // menghilangkan status saat data berhasil/gagal di get.
+          loadingText.style.display = "none";
+
+          console.log(dataUser);
+        } catch (error) {}
+      }
+      // menjalankan function asyn
+      tampilkanData();
+
     </script>
   </body>
 </html>
