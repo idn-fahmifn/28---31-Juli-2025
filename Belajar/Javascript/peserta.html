@@ -43,7 +43,7 @@
         padding: 20px 10px;
         background: #eeee;
       }
-      .card{
+      .card {
         width: 20%;
         background: #ffff;
         border: #222 solid 1px;
@@ -99,24 +99,38 @@
 
           //loop iteration data
           dataUser.forEach((item) => {
+            // menambahkan element card
             const card = document.createElement("div");
             card.setAttribute("class", "card");
 
+            // menambahkan element nama
             const nama = document.createElement("h3");
             nama.setAttribute("class", "nama");
-            nama.textContent = item.name
+            nama.textContent = item.name;
 
-            
+            // menambahkan element kota
+            const city = document.createElement("p");
+            city.setAttribute("class", "city");
+            city.textContent = item.city;
 
+            //menambahkan element umur
+            const age = document.createElement("p");
+            age.setAttribute("class", "age");
+            age.textContent = item.age;
 
-            containerCard.appendChild(card)
-            card.appendChild(nama)
+            // menambahkan element gambar
+            const image = document.createElement("img");
+            image.setAttribute("class", "image");
+            image.setAttribute("src", item.avatar);
+            image.setAttribute("width", 90);
 
-          })
-
-
-
-
+            // agar terlihat di halaman web
+            containerCard.appendChild(card);
+            card.appendChild(image);
+            card.appendChild(nama);
+            card.appendChild(city);
+            card.appendChild(age);
+          });
         } catch (error) {}
       }
       // menjalankan function asyn
