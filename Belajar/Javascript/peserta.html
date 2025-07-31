@@ -26,6 +26,23 @@
         align-items: center;
         color: #ffff;
       }
+
+      .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px 10px;
+      }
+      .container-card{
+        width: 100%;
+        min-height: 20dvw;
+        display: flex;
+        justify-content: center;
+        margin: 20px 10px;
+        padding: 20px 10px;
+        background: #eeee;
+      }
+
     </style>
   </head>
   <body>
@@ -34,6 +51,14 @@
       <i data-feather="shield"></i>
 
     </nav>
+
+    <div class="container">
+        <h3>Daftar Nama Teman : </h3>
+    </div>
+
+    <div class="container-card" id="containerCard"></div>
+
+
 
     <script>
       feather.replace();
