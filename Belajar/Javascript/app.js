@@ -18,14 +18,33 @@ const persegi = () => {
 }
 
 // expression
-const luasPersegi = () => alert('hello ini expression')
+const luas = () => alert('hello ini expression')
 
 // Paramter dan Argumen
-function hello(nama){
-  // console.log()
-  alert("Hallo selamat pagi, ", nama)
+
+// parameter => wadah kosong
+function hello(nama, waktu){
+  console.log(`Selamat ${waktu}, Mr ${nama}`)
+  // alert("Hallo selamat pagi, ", nama)
 }
-hello("Fahmi")
+// argumen => isinya.
+hello("Asep", "Pagi")
+
+function luasPersegi(sisi){
+  return sisi * sisi;
+}
+
+function persegiPanjang(panjang, lebar){
+  return panjang * lebar;
+}
+
+let angka = luasPersegi(10);
+console.log("Luas Persegi adalah : ", angka)
+
+let luasPersegiPanjang = persegiPanjang(10, 15) 
+console.log("Luas Persegi Panjang adalah : ", luasPersegiPanjang)
+
+
 
 
 
