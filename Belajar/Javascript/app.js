@@ -1,3 +1,41 @@
+// function 
+// blok kode yang bisa digunakan berulang.
+
+
+// function tradisional
+function sayHello(){
+  alert('Hallo ini adalah function');
+}
+
+function namaSaya(){
+  alert("halo nama saya Fahmi");
+}
+
+//arrow function
+const persegi = () => {
+  // 
+  console.log('Ini adalah rumus persegi');
+}
+
+// expression
+const luasPersegi = () => alert('hello ini expression')
+
+// Paramter dan Argumen
+function hello(nama){
+  // console.log()
+  alert("Hallo selamat pagi, ", nama)
+}
+hello("Fahmi")
+
+
+
+
+
+
+
+
+
+
 // kondisi
 
 let nilai = 29; //nilainya
@@ -26,8 +64,8 @@ else {
 
 // switch
 
-let today = 'sunday'; //nilai yang dijadikan pembanding
-// jika today isinya : 
+let today = "rabu"; //nilai yang dijadikan pembanding
+// jika today isinya :
 switch (today) {
   case "senin": //senin
     console.log("Mager bangun pagi"); //output
@@ -49,6 +87,20 @@ switch (today) {
     break;
   default:
     console.log("Data yang kamu masukan salah. Coba periksa lagi.");
+}
+
+// looping
+// for loop
+
+for (let i = 5; i < 10; i++) {
+  console.log("perulangan ke - ", i);
+}
+
+// while
+let count = 3;
+while (count < 5) {
+  console.log("Angka menghitung", count);
+  count++;
 }
 
 // operator
