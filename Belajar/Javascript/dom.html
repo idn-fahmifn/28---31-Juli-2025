@@ -1,84 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM - Document Object Model</title>
 
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        .container{
-            width: 100dvw;
-            height: 100dvh;
-            background-color: #eeeeee;
-        }
-        .hero{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        width: 100dvw;
+        height: 100dvh;
+        background-color: #eeeeee;
+      }
+      .hero {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="hero">
-            <h1 id="heroTitle">Judul hero</h1>
-            <p id="sub-title">Ini adalah sub-title</p>
-            <p class="paragraf">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloremque!</p>
-            <img src="" alt="" id="gambar">
-        </div>
+      <div class="hero">
+        <h1 id="heroTitle">Judul hero</h1>
+        <p id="sub-title">Ini adalah sub-title</p>
+        <p class="paragraf">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+          doloremque!
+        </p>
+        <img src="" alt="" id="gambar" />
+        <div class="" id="elemenBaru"></div>
+      </div>
     </div>
 
-    <div class="" id="elemenBaru"></div>
-
     <script>
+      // mengakses sebuah elemen
+      // mengambil element html yang menggunakan ID
+      const judul = document.getElementById("heroTitle"); //memanggil elemen yang terdapat ID di html
 
-        // mengakses sebuah elemen
-        // mengambil element html yang menggunakan ID
-        const judul = document.getElementById('heroTitle') //memanggil elemen yang terdapat ID di html
+      // mengambil element html menggunakan class
+      const paragraf = document.querySelector(".paragraf");
+      const image = document.getElementById("gambar");
+      const baru = document.getElementById("elemenBaru");
 
-        // mengambil element html menggunakan class
-        const paragraf = document.querySelector('.paragraf')
-        const image = document.getElementById('gambar');
-        const baru = document.getElementById('elemenBaru');
-        
-        // membuat elemen baru
-        const newElement = document.createElement('h1')
+      // membuat elemen baru
+      const newElement = document.createElement("p");
 
+      // mengubah element
+      // text content => mengubah isi diantara tag pembuka dan tag penutup.
+      judul.textContent = "Ini adalah web DOM";
+      newElement.textContent = "Ini adalah elemen baru";
 
-        // mengubah element
-        // text content => mengubah isi diantara tag pembuka dan tag penutup.
-        judul.textContent = "Ini adalah web DOM";
-        newElement.textContent = "Ini adalah elemen baru"
+      // mengubah style
+      paragraf.style.background = "#0088cc";
+      paragraf.style.padding = "10px";
 
+      //menambahkan/mengubah atribut
+      image.setAttribute(
+        "src",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png"
+      );
+      image.setAttribute("alt", "contoh gambar");
+      image.setAttribute("width", "100");
 
-        // mengubah style
-        paragraf.style.background = '#0088cc';
-        paragraf.style.padding = '10px';
-
-        //menambahkan/mengubah atribut
-        image.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png')
-        image.setAttribute('alt', 'contoh gambar')
-        image.setAttribute('width', '100')
-
-        newElement.appendChild('baru')
-
-        console.log(newElement)
-
-
-
-
-
-
+    //  menampilkan di html :
+      baru.appendChild(newElement);
+      
     </script>
-
-
-</body>
+  </body>
 </html>
