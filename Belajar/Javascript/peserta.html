@@ -16,6 +16,7 @@
         padding: 0;
         margin: 0;
         font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
       }
       .navbar {
         width: 100dvw;
@@ -38,9 +39,16 @@
         min-height: 20dvw;
         display: flex;
         justify-content: center;
-        margin: 20px 10px;
+        flex-wrap: wrap;
         padding: 20px 10px;
         background: #eeee;
+      }
+      .card{
+        width: 20%;
+        background: #ffff;
+        border: #222 solid 1px;
+        margin: 10px;
+        padding: 20px 10px;
       }
     </style>
   </head>
@@ -81,19 +89,30 @@
             console.log("error");
             throw new Error(`HTTP bermasalah : ${response.status}`);
           }
-          
+
           // mengambil data dari response
           const dataUser = await response.json();
 
           // menghilangkan status saat data berhasil/gagal di get.
           loadingText.style.display = "none";
 
-          console.log(dataUser);
+          //loop iteration data
+          dataUser.forEach((item) => {
+            const card = document.createElement("div");
+            card.setAttribute("class", "card")
+
+
+            containerCard.appendChild(card)
+
+          })
+
+
+
+
         } catch (error) {}
       }
       // menjalankan function asyn
       tampilkanData();
-
     </script>
   </body>
 </html>
