@@ -46,10 +46,23 @@
       .card {
         width: 20%;
         background: #ffff;
-        border: #222 solid 1px;
+        border: #717171 solid 1px;
         margin: 10px;
         padding: 20px 10px;
         border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .card:hover{
+        background-color: #f1f1f180;
+        transform: translateY(-10px);
+        transition: 2 ease-in-out;
+      }
+      .image{
+        width: 60px;
+        border-radius: 100%;
       }
     </style>
   </head>
