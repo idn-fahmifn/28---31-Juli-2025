@@ -36,6 +36,8 @@
         </div>
     </div>
 
+    <div class="" id="elemenBaru"></div>
+
     <script>
 
         // mengakses sebuah elemen
@@ -44,13 +46,18 @@
 
         // mengambil element html menggunakan class
         const paragraf = document.querySelector('.paragraf')
-
         const image = document.getElementById('gambar');
+        const baru = document.getElementById('elemenBaru');
+        
+        // membuat elemen baru
+        const newElement = document.createElement('h1')
 
 
         // mengubah element
         // text content => mengubah isi diantara tag pembuka dan tag penutup.
         judul.textContent = "Ini adalah web DOM";
+        newElement.textContent = "Ini adalah elemen baru"
+
 
         // mengubah style
         paragraf.style.background = '#0088cc';
@@ -59,8 +66,14 @@
         //menambahkan/mengubah atribut
         image.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png')
         image.setAttribute('alt', 'contoh gambar')
-        
-        console.log(image)
+        image.setAttribute('width', '100')
+
+        newElement.appendChild('baru')
+
+        console.log(newElement)
+
+
+
 
 
 
